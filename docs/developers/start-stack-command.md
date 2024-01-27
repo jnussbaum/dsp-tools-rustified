@@ -8,7 +8,7 @@ in the version that is running on [https://app.dasch.swiss](https://app.dasch.sw
 In addition to the containers, 
 a number of files from the DSP-API GitHub repository is necessary. 
 The version of the docker images and these files must be the same. 
-The version is configured in the following files in `src/dsp_tools/resources/start-stack/`:
+The version is configured in the following files in `python/dsp_tools/resources/start-stack/`:
 
 - `docker-compose.yml`: 
   The 5 variables `services/{app,db,sipi,api,ingest}/image` 

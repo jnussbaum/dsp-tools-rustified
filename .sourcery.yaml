@@ -6,9 +6,9 @@
 version: '1'  
 
 ignore:
-  - src/dsp_tools/commands/project/models
-  - src/dsp_tools/commands/xmlupload/models
-  - src/dsp_tools/models
+  - python/dsp_tools/commands/project/models
+  - python/dsp_tools/commands/xmlupload/models
+  - python/dsp_tools/models
 
 rule_settings:
   enable:

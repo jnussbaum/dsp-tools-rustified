@@ -8,7 +8,7 @@ import pytest
 
 class TestCLI(unittest.TestCase):
     """
-    Test if the files in 'src/dsp_tools/resources/schema' are accessible
+    Test if the files in 'python/dsp_tools/resources/schema' are accessible
     when DSP-TOOLS is installed from wheel instead of from source,
     and when the call is made from another working directory.
     In addition, making a CLI call also tests if all dependencies are shipped correctly,
@@ -36,13 +36,13 @@ class TestCLI(unittest.TestCase):
             f.unlink()
 
     def test_validate_lists_section_with_schema(self) -> None:
-        """Test if the resource file 'src/dsp_tools/resources/schema/lists-only.json' can be accessed."""
+        """Test if the resource file 'python/dsp_tools/resources/schema/lists-only.json' can be accessed."""
         args = ["create", "--lists-only", "--validate-only", str(self.test_project_systematic_file.absolute())]
         self._make_cli_call(args)
 
     def test_excel_to_json_resources(self) -> None:
         """
-        Test if the resource file 'src/dsp_tools/resources/schema/resources-only.json' can be accessed.
+        Test if the resource file 'python/dsp_tools/resources/schema/resources-only.json' can be accessed.
         The output is not tested here, this is done in the unit tests.
         """
         excel_file = Path("testdata/excel2json/excel2json_files/test-name (test_label)/resources.xlsx")
@@ -52,7 +52,7 @@ class TestCLI(unittest.TestCase):
 
     def test_excel_to_json_properties(self) -> None:
         """
-        Test if the resource file 'src/dsp_tools/resources/schema/properties-only.json' can be accessed.
+        Test if the resource file 'python/dsp_tools/resources/schema/properties-only.json' can be accessed.
         The output is not tested here, this is done in the unit tests.
         """
         excel_file = Path("testdata/excel2json/excel2json_files/test-name (test_label)/properties.xlsx")
@@ -61,11 +61,11 @@ class TestCLI(unittest.TestCase):
         out_file.unlink()
 
     def test_validate_project(self) -> None:
-        """Test if the resource file 'src/dsp_tools/resources/schema/project.json' can be accessed."""
+        """Test if the resource file 'python/dsp_tools/resources/schema/project.json' can be accessed."""
         self._make_cli_call(["create", "--validate-only", str(self.test_project_minimal_file.absolute())])
 
     def test_xml_upload(self) -> None:
-        """Test if the resource file 'src/dsp_tools/resources/schema/data.xsd' can be accessed."""
+        """Test if the resource file 'python/dsp_tools/resources/schema/data.xsd' can be accessed."""
         self._make_cli_call(["xmlupload", "-v", "--validate-only", str(self.test_data_minimal_file.absolute())])
 
     def _make_cli_call(self, args: list[str]) -> None:

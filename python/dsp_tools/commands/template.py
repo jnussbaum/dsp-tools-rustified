@@ -7,7 +7,7 @@ from dsp_tools.models.exceptions import UserError
 
 def generate_template_repo() -> bool:
     """
-    Copies the folder src/dsp_tools/resources/0100-template-repo to the working directory.
+    Copies the folder python/dsp_tools/resources/0100-template-repo to the working directory.
 
     Raises:
         UserError: If a folder with the same name already exists in the working directory
@@ -15,7 +15,7 @@ def generate_template_repo() -> bool:
     Returns:
         True if the folder could be copied without problems
     """
-    # copy contents of src/dsp_tools/resources/0100-template-repo to cwd/template-repo
+    # copy contents of python/dsp_tools/resources/0100-template-repo to cwd/template-repo
     template_path_of_user = Path("0100-template-repo")
     try:
         template_path_of_user.mkdir()
