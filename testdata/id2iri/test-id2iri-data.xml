@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <knora xmlns="https://dasch.swiss/schema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://dasch.swiss/schema ../../python/dsp_tools/resources/schema/data.xsd"
-    shortcode="4123"
-    default-ontology="testonto">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="https://dasch.swiss/schema ../../python/dsp_tools/resources/schema/data.xsd"
+       shortcode="4123"
+       default-ontology="testonto">
 
     <resource label="resptr_only" restype=":TestThing" id="resptr_only">
         <text-prop name=":hasSimpleText">
@@ -27,13 +27,15 @@
             <text encoding="utf8">Text</text>
         </text-prop>
         <text-prop name=":hasRichtext">
-            <text encoding="xml"> Text with a <a class="salsah-link" href="IRI:test_thing_1:IRI">link
-                to test_thing_1</a> and <strong>a bold <em>and italicized <a class="salsah-link"
-                            href="IRI:test_thing_2:IRI">link to test_thing_2</a>
+            <text encoding="xml">
+                Text with a <a class="salsah-link" href="IRI:test_thing_1:IRI">link to test_thing_1</a>
+                and <strong>a bold 
+                    <em>and italicized
+                        <a class="salsah-link" href="IRI:test_thing_2:IRI">link to test_thing_2</a>
                     </em>
                 </strong>
-                and trailing text and a <a class="salsah-link" href="IRI:test_thing_with_ark_1:IRI">link
-                to test_thing_with_ark_1</a>
+                and trailing text
+                and a <a class="salsah-link" href="IRI:test_thing_with_ark_1:IRI">link to test_thing_with_ark_1</a> 
             </text>
         </text-prop>
         <boolean-prop name=":hasBoolean">
@@ -46,13 +48,15 @@
             <text encoding="utf8">Text</text>
         </text-prop>
         <text-prop name=":hasRichtext">
-            <text encoding="xml"> Text with a <a class="salsah-link" href="IRI:test_thing_1:IRI">link
-                to test_thing_1</a> and <strong>a bold <em>and italicized <a class="salsah-link"
-                            href="IRI:test_thing_2:IRI">link to test_thing_2</a>
+            <text encoding="xml">
+                Text with a <a class="salsah-link" href="IRI:test_thing_1:IRI">link to test_thing_1</a>
+                and <strong>a bold 
+                    <em>and italicized
+                        <a class="salsah-link" href="IRI:test_thing_2:IRI">link to test_thing_2</a>
                     </em>
                 </strong>
-                and trailing text and a <a class="salsah-link" href="IRI:test_thing_with_ark_1:IRI">link
-                to test_thing_with_ark_1</a>
+                and trailing text
+                and a <a class="salsah-link" href="IRI:test_thing_with_ark_1:IRI">link to test_thing_with_ark_1</a> 
             </text>
         </text-prop>
         <resptr-prop name=":hasTestThing2">
