@@ -46,7 +46,7 @@ For example, if you have a structure like this:
 ```text
 dsp-tools
 ├── pyproject.toml
-└── src
+└── python
     └── dsp_tools
         ├── schemas
         │   └── data.xsd
@@ -59,7 +59,7 @@ it is not possible to do one of the following in dsp_tools/dsp_tools.py:
 ```python
 with open('schemas/data.xsd') as data_file:
      ...
-with open('src/dsp_tools/resources/schema/data.xsd') as data_file:
+with open('python/dsp_tools/resources/schema/data.xsd') as data_file:
      ...
 ```
 

@@ -107,7 +107,7 @@ class StackHandler:
     def _copy_resources_to_home_dir(self) -> None:
         """
         On most systems, Docker is not allowed to access files outside of the user's home directory.
-        For this reason, copy the contents of the distribution (src/dsp_tools/resources/start-stack)
+        For this reason, copy the contents of the distribution (python/dsp_tools/resources/start-stack)
         to the user's home directory (~/.dsp-tools/start-stack).
 
         Important: The files of the home directory might have been modified
