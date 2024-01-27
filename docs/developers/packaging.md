@@ -79,30 +79,30 @@ the build process. DSP-TOOLS uses poetry as both frontend and backend.
 
 What happens when a distribution package of DSP-TOOLS is created? Poetry creates two files in the `dist` folder: a `.
 tar.gz` compressed archive (the sdist or source distribution) and a `.whl` file (a wheel). Both contain the contents of 
-the `src` folder plus some metadata - they are equivalent. They are then uploaded to the 
+the `python` folder plus some metadata - they are equivalent. They are then uploaded to the 
 [Python Package Index (PyPI)](https://pypi.org/).  
 
 When a user installs DSP-TOOLS with `pip install dsp-tools`, pip takes the sdist or the wheel, unpacks it, and copies 
 it into the `site-packages` folder of the user's Python installation. As a result, the user has the same packages in 
-his `site-packages` folder as the `src` folder of the dsp-tools repository. In our case, this is the `dsp_tools` 
+his `site-packages` folder as the `python` folder of the dsp-tools repository. In our case, this is the `dsp_tools` 
 package. Since `site-packages` is on `sys.path`, the user can then import the package `dsp_tools` in his script.
 
 
-### Advantages of the src Layout
+### Advantages of the python Layout
 
-Putting all packages into a `src` folder has an important consequence: It forces the developer to work with an 
+Putting all packages into a `python` folder has an important consequence: It forces the developer to work with an 
 editable installation of his package. Why? Without an editable installation, it is impossible to write correct import 
-statements. `from src.package import module` will not work, because the user has `package` installed, not `src`. And 
+statements. `from python.package import module` will not work, because the user has `package` installed, not `python`. And 
 relative imports like `import module` will not work either, because when the tests code (situated in a separate 
 `test` folder) imports the actual code, the relative imports in the actual code fail. This is because relative imports 
 depend on the location of the file that is run, not on the file that contains the import statement. 
 
 The solution is to always have an editable installation of the package under development. Poetry does this 
 automatically when you execute `poetry install`. This makes the package `dsp_tools` importable - just like on a 
-user's machine. And exactly this is the big advantage: With the src layout and an editable installation, the setup on 
+user's machine. And exactly this is the big advantage: With the python layout and an editable installation, the setup on 
 the developer's machine is more similar to the user's setup. 
 
-The advantages of the src layout are:
+The advantages of the python layout are:
 
 - import parity
 - The tests run against the package as it will be installed by the user - not against the situation in the 
@@ -111,13 +111,13 @@ The advantages of the src layout are:
 - The editable installation is only able to import modules that will also be importable in a regular installation.
 - For the developer, the working directory is the root of the repository, so the root will implicitly be included in 
   `sys.path`. Users will never have the same current working directory than the developer. So, removing the packages 
-  from the root by putting them into `src` prevents some practices that will not work on the user's machine. 
+  from the root by putting them into `python` prevents some practices that will not work on the user's machine. 
 
 For more in-depth explanations, please visit the following pages:
 
 - [https://blog.ionelmc.ro/2014/05/25/python-packaging](https://blog.ionelmc.ro/2014/05/25/python-packaging)
 - [https://hynek.me/articles/testing-packaging](https://hynek.me/articles/testing-packaging)
-- [https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout)
+- [https://packaging.python.org/en/latest/discussions/python-layout-vs-flat-layout](https://packaging.python.org/en/latest/discussions/python-layout-vs-flat-layout)
 
 
 ## Publishing and Distribution

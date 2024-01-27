@@ -93,7 +93,7 @@ more information about referencing ontologies.
 
 The `$schema` object refers to the JSON schema for DSP data model definitions and is mandatory.
 
-`"$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/src/dsp_tools/resources/schema/project.json"`
+`"$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/python/dsp_tools/resources/schema/project.json"`
 
 
 
@@ -549,7 +549,7 @@ In addition, there is another complete example of a JSON project file here:
     "foaf": "http://xmlns.com/foaf/0.1/",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/src/dsp_tools/resources/schema/project.json",
+  "$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/python/dsp_tools/resources/schema/project.json",
   "project": {
     "shortcode": "0170",
     "shortname": "teimp",
