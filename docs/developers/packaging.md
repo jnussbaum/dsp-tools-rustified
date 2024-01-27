@@ -88,7 +88,7 @@ his `site-packages` folder as the `src` folder of the dsp-tools repository. In o
 package. Since `site-packages` is on `sys.path`, the user can then import the package `dsp_tools` in his script.
 
 
-### Advantages of the src layout
+### Advantages of the src Layout
 
 Putting all packages into a `src` folder has an important consequence: It forces the developer to work with an 
 editable installation of his package. Why? Without an editable installation, it is impossible to write correct import 
