@@ -19,6 +19,9 @@ include = [
     "python/dsp_tools/resources/*",
     "python/dsp_tools/py.typed",    # see https://mypy.readthedocs.io/en/stable/installed_packages.html#making-pep-561-compatible-packages
 ]
+packages = [
+    { include = "python/dsp_tools" },
+]
 
 
 [tool.poetry.dependencies]
