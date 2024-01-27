@@ -24,8 +24,7 @@
     <permissions id="prop-default">
         <allow group="UnknownUser">V</allow>
         <allow group="KnownUser">V</allow>
-        <allow group="Creator">
-        D</allow>
+        <allow group="Creator">D</allow>
         <allow group="ProjectAdmin">CR</allow>
     </permissions>
     <permissions id="prop-restricted">
@@ -255,28 +254,19 @@
             <uri permissions="prop-restricted">https://reg-exr.com:3000/path/to/file_(%C3%89).htm</uri>
             <uri permissions="prop-restricted">https://reg-exr.com:3000/path/to/file#fragment</uri>
             <uri permissions="prop-restricted">https://reg-exr.com:3000/path/to/file?query=test</uri>
-            <uri permissions="prop-restricted">
-                https://reg-exr.com:3000/path/to/file?query=test#fragment</uri>
+            <uri permissions="prop-restricted">https://reg-exr.com:3000/path/to/file?query=test#fragment</uri>
             <uri permissions="prop-restricted">https://reg-exr.com/path/to/file?query=test#fragment</uri>
             <uri permissions="prop-restricted">http://www.168.1.1.0/path</uri>
             <uri permissions="prop-restricted">http://www.168.1.1.0:4200/path</uri>
-            <uri permissions="prop-restricted">
-                http://[2001:0db8:0000:0000:0000:8a2e:0370:7334]:4200/path</uri>
-            <uri permissions="prop-restricted">
-                https://en.wikipedia.org/wiki/Haiku#/media/File:Basho_Horohoroto.jpg</uri>
+            <uri permissions="prop-restricted">http://[2001:0db8:0000:0000:0000:8a2e:0370:7334]:4200/path</uri>
+            <uri permissions="prop-restricted">https://en.wikipedia.org/wiki/Haiku#/media/File:Basho_Horohoroto.jpg</uri>
             <uri permissions="prop-restricted">http://datypic.com/prod.html#shirt</uri>
-            <uri permissions="prop-restricted">
-                https://www.findagrave.com/memorial/171722836/krikor-madenician?_gl=1*100n0s5*_ga*NzIzMDQxNjc2LjE2Mjg2MDk1OTQ.*_ga_4QT8FMEX30*MTY1Mjc5OTI4OC4xNC4xLjE2NTI4MDA2MDQuMA..</uri>
-            <uri permissions="prop-restricted">
-                https://markarslan.org/ArmenianImmigrants/Public-ViewDetail-ArmenianImmigrants-Main.php?submit=View&amp;Staging=&amp;SourcePage=Public-ViewSummary-ArmenianImmigrants-Main-ByDestinationDate&amp;SelectDestinationYear=1907&amp;SelectLastNameStd=all&amp;argument1=PLIN-29NOV1907-3-73-0018</uri>
-            <uri permissions="prop-restricted">
-                http://markarslan.org/ArmenianImmigrants/Public-ViewDetail-ArmenianImmigrants-Main.php?submit=View&amp;Staging=&amp;SourcePage=Public-ViewSummary-ArmenianImmigrants-Main-ByDestinationDate&amp;SelectDestinationYear=1907&amp;SelectLastNameStd=all&amp;argument1=CRTH-12JAN1907-3-%404-0016</uri>
-            <uri permissions="prop-restricted">
-                https://www.ancestry.com/discoveryui-content/view/47577828:60525?ssrc=pt&amp;tid=109007397&amp;pid=410070328478</uri>
-            <uri permissions="prop-restricted">
-                https://geohack.toolforge.org/geohack.php?pagename=Adige&amp;params=45_8_59_N_12_19_13_E_type:river</uri>
-            <uri permissions="prop-restricted">
-                https://www.digitale-sammlungen.de/de/view/bsb00055375?page=,1</uri>
+            <uri permissions="prop-restricted">https://www.findagrave.com/memorial/171722836/krikor-madenician?_gl=1*100n0s5*_ga*NzIzMDQxNjc2LjE2Mjg2MDk1OTQ.*_ga_4QT8FMEX30*MTY1Mjc5OTI4OC4xNC4xLjE2NTI4MDA2MDQuMA..</uri>
+            <uri permissions="prop-restricted">https://markarslan.org/ArmenianImmigrants/Public-ViewDetail-ArmenianImmigrants-Main.php?submit=View&amp;Staging=&amp;SourcePage=Public-ViewSummary-ArmenianImmigrants-Main-ByDestinationDate&amp;SelectDestinationYear=1907&amp;SelectLastNameStd=all&amp;argument1=PLIN-29NOV1907-3-73-0018</uri>
+            <uri permissions="prop-restricted">http://markarslan.org/ArmenianImmigrants/Public-ViewDetail-ArmenianImmigrants-Main.php?submit=View&amp;Staging=&amp;SourcePage=Public-ViewSummary-ArmenianImmigrants-Main-ByDestinationDate&amp;SelectDestinationYear=1907&amp;SelectLastNameStd=all&amp;argument1=CRTH-12JAN1907-3-%404-0016</uri>
+            <uri permissions="prop-restricted">https://www.ancestry.com/discoveryui-content/view/47577828:60525?ssrc=pt&amp;tid=109007397&amp;pid=410070328478</uri>
+            <uri permissions="prop-restricted">https://geohack.toolforge.org/geohack.php?pagename=Adige&amp;params=45_8_59_N_12_19_13_E_type:river</uri>
+            <uri permissions="prop-restricted">https://www.digitale-sammlungen.de/de/view/bsb00055375?page=,1</uri>
         </uri-prop>
         <date-prop name=":hasDate">
             <date>JULIAN:BCE:0700:BCE:0600</date>
