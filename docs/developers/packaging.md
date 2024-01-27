@@ -117,7 +117,7 @@ For more in-depth explanations, please visit the following pages:
 
 - [https://blog.ionelmc.ro/2014/05/25/python-packaging](https://blog.ionelmc.ro/2014/05/25/python-packaging)
 - [https://hynek.me/articles/testing-packaging](https://hynek.me/articles/testing-packaging)
-- [https://packaging.python.org/en/latest/discussions/python-layout-vs-flat-layout](https://packaging.python.org/en/latest/discussions/python-layout-vs-flat-layout)
+- [https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout)
 
 
 ## Publishing and Distribution
