@@ -36,6 +36,7 @@ docker = "^7.0.0"
 pyyaml = "^6.0.1"
 rustworkx = "^0.13.2"
 termcolor = "^2.4.0"
+maturin = "^1.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -115,8 +116,13 @@ bump-version = """
 # Tells “frontend” build tools (like pip, build, or poetry) what “backend” build tool to use (e.g. setuptools, poetry).
 # The "backend" doesn't need to be installed. It will be installed by the "frontend" in a temporary, isolated
 # environment for use during the build process.
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+
+[tool.maturin]
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+features = ["pyo3/extension-module"]
 
 
 [tool.pytest.ini_options]
