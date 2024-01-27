@@ -20,7 +20,7 @@ include = [
     "python/dsp_tools/py.typed",    # see https://mypy.readthedocs.io/en/stable/installed_packages.html#making-pep-561-compatible-packages
 ]
 packages = [
-    { include = "python/dsp_tools" },
+    { include = "dsp_tools", from = "python" },
 ]
 
 
