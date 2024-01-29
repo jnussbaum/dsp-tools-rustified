@@ -1,0 +1,16 @@
+[package]
+name = "dsp-tools"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+# name of the native library. Use this name in Python to import this lib. 
+# If you change this, you must also change the name of the `#[pymodule]` in `src/lib.rs`.
+name = "string_sum"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+# "rlib" or "lib" is necessary for downstream Rust code (e.g. `bin/`, `tests/`) to `use name_of_lib;` 
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.20.2", features = ["extension-module", "abi3-py312"] }
+# "abi3-py12" tells pyo3 (and maturin) to build using the stable ABI with minimum Python version 3.12
