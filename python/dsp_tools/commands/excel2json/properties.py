@@ -8,6 +8,7 @@ import jsonschema
 import numpy as np
 import pandas as pd
 import regex
+import string_sum
 
 from dsp_tools.commands.excel2json.input_error import (
     InvalidExcelContentProblem,
@@ -483,6 +484,10 @@ def excel2properties(
         )
         for index, row in property_df.iterrows()
     ]
+
+    # try out rust call
+    res = string_sum.sum_as_string(2, 5)
+    print(res)
 
     # write final JSON file
     _validate_properties(properties_list=props, excelfile=excelfile)

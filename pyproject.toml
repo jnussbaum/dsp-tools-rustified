@@ -127,7 +127,7 @@ build-backend = "maturin"
 # "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
 features = ["pyo3/extension-module"]
 python-source = "python"
-module-name = "dsp_tools._lib_name"
+module-name = "dsp_tools.string_sum"
 
 
 [tool.pytest.ini_options]
