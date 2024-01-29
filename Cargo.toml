@@ -4,12 +4,17 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
+# name of the native library. Use this name in Python to import this lib. 
+# If you change this, you must also change the name of the `#[pymodule]` in `src/lib.rs`.
 name = "dsp_tools"
 # "cdylib" is necessary to produce a shared library for Python to import from.
+# Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
+# to `use name_of_lib;` unless the "rlib" or "lib" crate type is also included, e.g.:
+# crate-type = ["cdylib", "rlib"]
 crate-type = ["cdylib"]
 
 # [dependencies]
-# rand = "0.8.4"
+pyo3 = { version = "0.20.2", features = ["extension-module"] }
 
 [dependencies.pyo3]
 version = "0.20.0"
